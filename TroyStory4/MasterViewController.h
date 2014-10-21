@@ -44,9 +44,11 @@ step 4
 - we also had to change in storyboard to show the detailTextLabel - a simple change in the panel opened on the right side
  
  step 7
- - in this step, we just wanted to be able to sort on name and prowess - in the loadData, we added two NSSortDescriptors to sort based on name and prowess and then added the line below starting with request.sorDescriptors to change the request to be sorted before it is then passed back into the self.trojans array which we use to fill the tableView
+ - in this step, we just wanted to be able to sort on name and prowess - this is a unique benefit of using Core Data
+ - in the loadData, we added two NSSortDescriptors to sort based on name and prowess and then added the line below starting with request.sorDescriptors to change the request to be sorted before it is then passed back into the self.trojans array which we use to fill the tableView
  
- 
+ step 8
+ - we just wanted to showcase another unique benefit of using Core Data - the ability to use NSPredicate to use predicateWithFormat to only show objects that conform to certain things, in this case, we only want to table to show trojans with a prowess of over 5
  
 
 */

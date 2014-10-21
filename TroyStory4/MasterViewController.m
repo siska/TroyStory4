@@ -30,7 +30,9 @@
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:@"Trojan"];
     NSSortDescriptor *sortDescriptor1 = [[NSSortDescriptor alloc] initWithKey:@"name" ascending:YES]; //step 7
     NSSortDescriptor *sortDescriptor2 = [[NSSortDescriptor alloc] initWithKey:@"prowess" ascending:NO];// step 7
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"prowess > %d", 5]; //step 8 - wouldn't usually have a static variable here, it's just to show we can still use %d, %@, etc.
 
+    request.predicate = predicate; //step 8
     request.sortDescriptors = [NSArray arrayWithObjects:sortDescriptor1, sortDescriptor2, nil]; //step 7
     self.trojans = [self.managedObjectContext executeFetchRequest:request error:nil]; //step 4 - don't use nil here in actual apps, do something with the error NSError(error) etc.
     [self.tableView reloadData];
