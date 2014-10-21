@@ -42,4 +42,11 @@ step 4
  - we went into the cxdatamodel again and added a new attribute of "prowess" to the Trojan - set as an integer 32 or something - he said this is the standard - then we added that to the onTrojanConquest so that the trojans will get a random prowess number assigned to them - we had to add the plus 1 because it starts at 0
  - then we went down to the cellForRow... and added the detailedTextLabel part to show the prowess and used that stringValue at the end to convert it to text
 - we also had to change in storyboard to show the detailTextLabel - a simple change in the panel opened on the right side
+ 
+ step 7
+ - in this step, we just wanted to be able to sort on name and prowess - in the loadData, we added two NSSortDescriptors to sort based on name and prowess and then added the line below starting with request.sorDescriptors to change the request to be sorted before it is then passed back into the self.trojans array which we use to fill the tableView
+ 
+ 
+ 
+
 */
