@@ -17,6 +17,9 @@
 @end
 
 /*
+ 
+ - when setting it up, we used the Master Detail Application template and made sure that Core Data was checked - using the Master Detail Application ensures that we get that managedObjectContext property that we can use on self
+
 step 1 
  - we just set up the project to be able to use Core Data and recreate how Core Data is used - one important thing was to check the Core Data box when we were setting up the program
  - we also deleted one @property from this .h file and deleted everything from MasterVC, adding back the #import, interface, and implemenation - nothing added yet
@@ -36,6 +39,7 @@ step 4
  - add the data pieces within the onTrojanConquest - this adds a Trojan object that we created in the .xcdata... with whatever name was in the text field - we then save to the managedObjectContext and call the loadData to reload the tableView data with the new name
  
  step 6
- - we went into the cxdatamodel again and added a new attribute of "prowess" to the Trojan - set as an integer 32 or something - he said this is the standard - then we added that to the onTrojanConquest so that the trojans will get a random prowess number assigned to them
-
+ - we went into the cxdatamodel again and added a new attribute of "prowess" to the Trojan - set as an integer 32 or something - he said this is the standard - then we added that to the onTrojanConquest so that the trojans will get a random prowess number assigned to them - we had to add the plus 1 because it starts at 0
+ - then we went down to the cellForRow... and added the detailedTextLabel part to show the prowess and used that stringValue at the end to convert it to text
+- we also had to change in storyboard to show the detailTextLabel - a simple change in the panel opened on the right side
 */
